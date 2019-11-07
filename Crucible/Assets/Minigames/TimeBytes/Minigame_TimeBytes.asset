@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e15ce27a3b28b498c2dcfffd025305, type: 3}
+  m_Name: Minigame_TimeBytes
+  m_EditorClassIdentifier: 
+  Name: Time Bytes
+  Description: A high-speed branching narrative adventure.
+  Year: 2019
+  Semester: 1
+  Thumbnail: {fileID: 21300000, guid: c2f7d75af32ff7d4885123afca3890b9, type: 3}
+  CreatorNames: Dominic Calkosz
+  P1_Objective: Explore
+  P2_Objective: Explore
+  P1_JoystickDescription: Skip text animation
+  P1_Button1Description: Choose option 1
+  P1_Button2Description: Choose option 2
+  P2_JoystickDescription: Skip text animation
+  P2_Button1Description: Choose option 1
+  P2_Button2Description: Choose option 2
+  GameScene:
+    sceneAsset: {fileID: 102900000, guid: 4a2d3301afd28e641a3059b1d7a2177d, type: 3}
+    scenePath: Assets/Minigames/TimeBytes/Scene_TimeBytes.unity
+  SupportedGameModes: 4
+  ExcludeFromGameList: 0
