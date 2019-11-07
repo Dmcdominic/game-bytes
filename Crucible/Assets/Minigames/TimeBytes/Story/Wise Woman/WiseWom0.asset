@@ -10,17 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c78a082e21e57a04890f656263ff6139, type: 3}
-  m_Name: Test Extension
+  m_Name: WiseWom0
   m_EditorClassIdentifier: 
-  description: (Test extension)
-  revisitAlt: {fileID: 0}
-  entryEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  description: You finally reach the peak of the mountain, where an elderly woman
+    sits, cross-legged, smiling faintly at you.
+  revisitAlt: {fileID: 11400000, guid: 67bcd7f98d2b12a408272268b97ef46b, type: 2}
+  entryEvent: 
   alreadyVisited: 0
   continuation:
     text: 
-    nextElement: {fileID: 0}
-    onChooseEvent:
-      m_PersistentCalls:
-        m_Calls: []
+    nextElement: {fileID: 11400000, guid: 03cba25a549031f40905daf24e9ce8a2, type: 2}
+    onChooseEvent: 

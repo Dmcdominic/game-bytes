@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// A story node that allows you to choose between two options.
@@ -18,13 +19,13 @@ public class TimeBytes_Fork : TimeBytes_StoryElement {
 
 // A single selectable option for a story node
 [System.Serializable]
-public struct TimeBytes_StoryOption {
+public class TimeBytes_StoryOption {
   [Tooltip("The text displayed on the button for this option.")]
   public string text;
 
   [Tooltip("The story element to go if this option is selected. You may leave this blank in order to progress nowhere.")]
   public TimeBytes_StoryElement nextElement;
 
-  [Tooltip("[Optional] This event will be invoked when this option is selected.")]
-  public string onChooseEvent;
+  [HideInInspector]
+  public UnityEvent onChooseEvent = new UnityEvent();
 }

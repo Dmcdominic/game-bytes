@@ -40,15 +40,11 @@ public class TimeBytes_DisplayController : MonoBehaviour {
 
     // Check for input from this player, to select an option (as long as the animation is done)
     if (descr_fully_visible()) {
-      Debug.Log("description is fully visible.");
       if (current_element is TimeBytes_Fork) {
-        Debug.Log("Current element is a fork");
         if (MinigameInputHelper.IsButton1Down(player)) {
-          Debug.Log("button1down: " + current_element);
           TimeBytes_Fork fork = current_element as TimeBytes_Fork;
           choose_option(fork.Option1);
         } else if (MinigameInputHelper.IsButton2Down(player)) {
-          Debug.Log("button2down: " + current_element);
           TimeBytes_Fork fork = current_element as TimeBytes_Fork;
           choose_option(fork.Option1);
         }
@@ -68,26 +64,35 @@ public class TimeBytes_DisplayController : MonoBehaviour {
     }
   }
 
+  // Called when the player chooses a certain option
   private void choose_option(TimeBytes_StoryOption option) {
-    Debug.Log("choose_option called for option: " + option);
-    // Invoke the option's onChooseEvent, if it's not empty
-    if (option.onChooseEvent.Length > 0) {
-      // TODO - invoke the option's option.onChooseEvent
-    }
+    // Invoke the option's onChooseEvent
+    option.onChooseEvent.Invoke();
 
+    // Continue to the next element
     if (option.nextElement != null) {
       display_element(option.nextElement);
+    } else if (option.onChooseEvent == null) {
+      Debug.LogError("No Next Element or On Choose Event given for option: " + option);
     }
   }
 
   // Displays a given story element for this player
   private void display_element(TimeBytes_StoryElement element) {
+    // First check for a revisit
+    if (element.alreadyVisited && element.revisitAlt != null) {
+      display_element(element.revisitAlt);
+      return;
+    }
+    element.alreadyVisited = true;
+
+    // Basic setup for new element
     current_element = element;
     MinigameController.Instance.AddScore(player, 1);
 
     // Invoke the element's entryEvent, if it's not empty
-    if (element.entryEvent.Length > 0) {
-      // TODO - invoke the element's entryEvent
+    if (element.entryEvent != null) {
+      element.entryEvent.Invoke();
     }
 
     // Initialize the description text

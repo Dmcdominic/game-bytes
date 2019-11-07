@@ -9,18 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c78a082e21e57a04890f656263ff6139, type: 3}
-  m_Name: Test Extension
+  m_Script: {fileID: 11500000, guid: fcf1cab1d7d81c5419e05e51f0888440, type: 3}
+  m_Name: WWGone
   m_EditorClassIdentifier: 
-  description: (Test extension)
+  description: You finally reach the peak of the mountain... but there is nothing
+    here. Nothing except for a single white flower petal.
   revisitAlt: {fileID: 0}
-  entryEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  entryEvent: 
   alreadyVisited: 0
-  continuation:
-    text: 
-    nextElement: {fileID: 0}
-    onChooseEvent:
-      m_PersistentCalls:
-        m_Calls: []

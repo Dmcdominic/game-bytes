@@ -13,13 +13,22 @@ MonoBehaviour:
   m_Name: Giant - Hate
   m_EditorClassIdentifier: 
   description: A strange pale humanoid, 10 meters tall, stands before you. "Hate outlives
-    the hateful" they whisper, as they extend each arm towards you.
-  entryEvent: 
+    the hateful" they whisper, as they extend each arm towards you. In one hand, a
+    pen. In the other, a dagger.
+  revisitAlt: {fileID: 0}
+  entryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  alreadyVisited: 0
   Option1:
+    text: Take the pen.
+    nextElement: {fileID: 11400000, guid: 9c3dd0239bbc06d47afa796126c84502, type: 2}
+    onChooseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  Option2:
     text: Take the dagger.
     nextElement: {fileID: 11400000, guid: 741f30b7a98cf3d4c9033d21c7e1063e, type: 2}
-    onChooseEvent: 
-  Option2:
-    text: Take the pen.
-    nextElement: {fileID: 11400000}
-    onChooseEvent: 
+    onChooseEvent:
+      m_PersistentCalls:
+        m_Calls: []

@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed97d630decdc49b0911bdc49fe532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
+  player: 1
   config: {fileID: 11400000, guid: 5dcf1b26d2c65b544b07a482778b872f, type: 2}
   description_TMP: {fileID: 2697615838175574529}
   option1_TMP: {fileID: 1655535250632890386}
